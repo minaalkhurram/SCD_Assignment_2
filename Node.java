@@ -2,8 +2,13 @@ import java.util.*;
 
 public class Node<T>{
     private T data;
-    private Node next;
+    public Node<T> next;
 
+    Node()
+    {
+      this.data=null;
+        this.next=null;
+    }
     Node(T val)
     {
         this.data=val;
