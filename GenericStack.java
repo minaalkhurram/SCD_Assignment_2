@@ -17,7 +17,7 @@ public void push(T val)
 
 }
 
-public void pop()
+public Node<T> pop()
 {
     try
     {
@@ -31,7 +31,7 @@ public void pop()
             System.out.println("Pop element data : "+head.getData());
             Node<T> nn=head;
             head=head.next;
-            //return nn;
+            return nn;
 
         }
     }
@@ -39,6 +39,7 @@ public void pop()
     {
        System.out.println("Exception : "+e);
     }
+    return null;
 }
 
 public void print()
@@ -50,6 +51,29 @@ public void print()
         nn=nn.next;
 
     }
+}
+
+public boolean isEmpty()
+{
+    if(head==null)
+    return true;
+    else 
+    return false;
+}
+public int size()
+{
+    if(this.isEmpty()==false)
+    {
+        Node<T> temp=head;
+        int size=0;
+        while(temp!=null)
+        {
+            temp=temp.next;
+            size++;
+        }
+        return size;
+    }
+    return 0;
 }
 
 }
