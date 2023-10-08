@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class main {
+public class GenericMain {
     public static void main(String args[]){
       GenericStack<Integer> intStack=new GenericStack<Integer>();
       GenericStack<String> strStack=new GenericStack<String>();
