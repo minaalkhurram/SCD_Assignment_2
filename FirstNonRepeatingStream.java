@@ -12,21 +12,12 @@ public class FirstNonRepeatingStream {
     public void add(Character c)
     {
           boolean check=false;
-        for(Map.Entry m : freqeuncy.entrySet()){    
-            //if key already exists 
-            if(m.getKey()==c)
-            {
-                for(int i=0;i<stream.size();i++)
-                {
-                    if(stream.get(i)==m.getKey())
-                    {
-                        check=true;
-                        stream.remove(i);
-                    }
-                }
-            } 
-          
-           }
+
+          if(freqeuncy.containsKey(c))
+          {
+              check=true;
+            stream.remove(c);
+          }
            
            if(check==false)
            {
